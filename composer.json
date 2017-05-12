@@ -1,0 +1,27 @@
+{
+    "name": "corycollier/host-getter",
+    "description": "Library to get web host information for a given domain",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Cory Collier",
+            "email": "corycollier@corycollier.com"
+        }
+    ],
+
+    "autoload": {
+        "psr-4": {
+            "HostGetter\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable" : true,
+    "require": {
+        "phpWhois/phpWhois": "^4.2",
+        "guzzlehttp/guzzle": "^6.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "5.7.x-dev"
+    }
+}
