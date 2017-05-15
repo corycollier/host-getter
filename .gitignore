@@ -6,3 +6,8 @@ composer.phar
 # composer.lock
 
 test.php
+
+build/*
+!build/phpunit.xml
+!build/phpmd.xml
+cache.properties
