@@ -8,4 +8,4 @@ php:
 
 before_script: composer install
 
-script: vendor/bin/phpunit -c build/phpunit.xml tests
+script: ant full-build
