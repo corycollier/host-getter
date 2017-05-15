@@ -24,6 +24,7 @@ class Query
     public function find($domain, $type = DNS_A)
     {
         $server = $this->getServer($domain, $type);
+
         $whois = $this->getWhois($server);
         return new Result($whois['net'], $whois['org']);
     }
@@ -67,6 +68,13 @@ class Query
         $net = $data['nets']['net'];
         if (array_key_exists('orgRef', $net)) {
             return $net['orgRef']['$'];
+        }
+
+        // if there is more than one net item, iterate through the numeric array
+        foreach ($net as $item) {
+            if (array_key_exists('orgRef', $item)) {
+                return $item['orgRef']['$'];
+            }
         }
     }
 
