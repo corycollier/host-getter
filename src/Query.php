@@ -24,7 +24,6 @@ class Query
     public function find($domain, $type = DNS_A)
     {
         $server = $this->getServer($domain, $type);
-
         $whois = $this->getWhois($server);
         return new Result($whois['net'], $whois['org']);
     }
