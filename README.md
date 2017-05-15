@@ -1,5 +1,6 @@
 # Host Getter
 This project serves as a library to allow a simple interface for getting host information from a domain.
+[![Build Status](https://travis-ci.org/corycollier/host-getter.svg?branch=master)](https://travis-ci.org/corycollier/host-getter)
 
 ## Usage
 ```php
